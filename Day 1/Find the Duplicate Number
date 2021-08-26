@@ -1,0 +1,10 @@
+// Problem Link: https://leetcode.com/problems/find-the-duplicate-number/
+
+//  Approach 1(Brute Force):  Time Complexity: O(N*log(N)), Space Complexity: O(1)
+
+// Sort the array and traverse till n-1 and check if arr[i]==arr[i+1],then return arr[i]
+
+// Approach : Time Complexity: O(N)  Space Complexity: O(N)
+// Store the frequnecy of each element in map,and when m[arr[i]]>1,return arr[i];
+
+// Approach 3:
