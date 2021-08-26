@@ -20,6 +20,17 @@ int maxSubArray(vector<int>& arr) {
 
 // Approach 2: Time Complexity: O(N*N), Space Complexity: O(1)
 
+int maxSubArray(vector<int>& arr) {
+        int n=arr.size(),ans=INT_MIN;
+        for(int i=0;i<n;i++){
+            int sum=0;
+            for(int j=i;j<n;j++){
+                sum+= arr[j];
+                ans=max(sum,ans);
+            }
+        }
+        return ans;
+    }
 
 
 // Approach 3: Time Complexity: O(N), Space Complexity: O(1)
