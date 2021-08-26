@@ -51,15 +51,22 @@ int *findTwoElement(int *arr, int n) {
         return a;
     }
     
-// Approach 2: Time Complexity: O(N) , Space Complexity: O(N)
-
-// Find Sum of all the 
-
-
-
-
-
 // Approach 3: Time Complexity: O(N) , Space Complexity: O(N)
+
+// Find Sum of all the the ekements of the array and sum of sqauares of these elements of an array in two variable
+// Add summation of (1...N) in the first variable and sum of squares from (1...N) in the 2nd variable
+// Now subtract sum of squares and also sum  (x+y), (x^2 -y^2)
+// now (x^2-y^2)= (x+y)*(x-y)
+// substitute (x-y) and get (x+y)
+// Now we know (x-y) and (x+y), find x,y
+// check if x is present in array or not.If it is then it is a repeating no and y is missing no else vice versa.
+
+
+
+
+
+
+// Approach 4: Time Complexity: O(N) , Space Complexity: O(1)
 
 // Step 1: Find XOR of all the elements of an array,say x.
 // Step 2: Find XOR of x with xor of(1......N),say Y
@@ -75,7 +82,9 @@ int *findTwoElement(int *arr, int n) {
 // element and vice versa.
 
 int *findTwoElement(int *arr, int n) {
+        // code here
         int x=0;
+        
         for(int i=0;i<n;i++){
             x = (x ^ arr[i]);
         }
@@ -89,29 +98,23 @@ int *findTwoElement(int *arr, int n) {
             }
             y=y<<1;
         }
-        vector<int> v1,v2;
+        int p=0,q=0;
         for(int i=0;i<n;i++){
-            if((arr[i] & y)==0){
-                v1.push_back(arr[i]);
+            if((arr[i] & (y))==0){
+                p= (p ^ arr[i]);
             }
             else{
-                v2.push_back(arr[i]);
+                q = (q ^ arr[i]);
             }
             if(((i+1) & y)==0){
-                v1.push_back(i+1);
+                p=(p ^ (i+1));
             }
             else{
-                v2.push_back(i+1);
+                q = (q ^ (i+1));
             }
         }
-        int p=0,q=0;
+        
         int *a=new int(2);
-        for(int i=0;i<v1.size();i++){
-            p= (p ^ v1[i]);
-        }
-        for(int i=0;i<v2.size();i++){
-            q = (q ^ v2[i]);
-        }
         for(int i=0;i<n;i++){
             if(q==arr[i]){
                 a[0]=q;
@@ -122,6 +125,3 @@ int *findTwoElement(int *arr, int n) {
         a[0]=p,a[1]=q;
         return a;
     }
-    
-    
-    
