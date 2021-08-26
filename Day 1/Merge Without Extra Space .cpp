@@ -38,12 +38,12 @@ void merge(long long arr1[], long long arr2[], int n, int m) {
     }
 
 
-// Approach 2: Time Complexity: O(N) Space Complexity: O(1)
+// Approach 2: Time Complexity: O((N*log(N)+(M*log(M)) Space Complexity: O(1)
 
 // Here we maintain 2 pointers, one pointing at the end of the first array and the second at the starting of the second array
 // If we get arr1[i]>arr2[j] => swap(arr1[i],arr2[j]) , i--,j++;
 // If we get arr2[j]<=arr1[i], it means if the current arr1[j]>=arr1[i],then all the elements right to j in arr2 will also be greater than arr1[i].So, we don't need to traverse
-// And hence we break
+// And hence we break the loop
 
 void merge(long long arr1[], long long arr2[], int n, int m) 
         { 
