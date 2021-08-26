@@ -2,7 +2,7 @@
 
 
 
-// Approach 1: Time Complexity: O(N) Space Complexity: O(N)
+// Approach 1: Time Complexity: O(N+M) Space Complexity: O(N*M)
 
 // Here we take a vector in which insert the elements from the two arrays in a sorted manner.
 // After this,we traverse the vector and put n elements in the first array and rest m in the second array
