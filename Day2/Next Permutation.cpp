@@ -22,16 +22,22 @@ void nextPermutation(vector<int>& arr) {
             reverse(arr.begin(),arr.end());
         }
         else{
-            for(int i=ind1+1;i<n;i++){
-                if(arr[i]>arr[ind1]){
-                    
-                    ind2=i;
-                }
+            int j=n-1;
+            while(1){
+                if(arr[j]>arr[ind1]){
+                    ind2=j;
+                    break;
+                    }
+                j--;
             }
             swap(arr[ind2],arr[ind1]);
-            if(ind1+1<n){
-                
-                sort(arr.begin()+ind1+1,arr.end());
+            int i=ind1+1;
+            j=n-1;
+            // reversing the right part
+            while(i<j){
+                swap(arr[i],arr[j]);
+                i++;
+                j--;
             }
         }
     }
