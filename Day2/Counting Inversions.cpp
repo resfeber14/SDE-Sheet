@@ -1,5 +1,5 @@
 // Problem Link:  https://practice.geeksforgeeks.org/problems/inversion-of-array-1587115620/1#
-
+//  Problem Link: https://leetcode.com/problems/count-of-smaller-numbers-after-self/
 
 // Approach : Time Complexity: O(N*log(N)), Space Complexity: O(N)
 
