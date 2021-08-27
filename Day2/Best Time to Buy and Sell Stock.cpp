@@ -20,3 +20,18 @@ int maxProfit(vector<int>& prices) {
         return profit;
     }
 
+// Different Implementation :
+
+int maxProfit(vector<int>& arr) {
+        int n=arr.size(),buy=arr[0],sell=arr[0],ans=0;
+        for(int i=1;i<n;i++){
+            sell=max(arr[i],sell);
+            ans=max(ans,sell-buy);
+            if(buy>arr[i]){
+                buy=arr[i];
+                sell=arr[i];
+            }
+            
+        }
+        return ans;
+    }
