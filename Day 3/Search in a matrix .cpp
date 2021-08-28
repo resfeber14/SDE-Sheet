@@ -23,7 +23,7 @@ bool searchMatrix(vector<vector<int>>& arr, int k) {
 // of size nxm and apply binary search,then it will work
 
 
-// Approach 1: Time Complexity: O(log(N*M)) Space Complexity: O(1)
+// Approach 3: Time Complexity: O(log(N*M)) Space Complexity: O(1)
 
 // Instead of storing it , we can determine also by applying binary search to the whole matrix without storing all the elments.
 // By assuming that we are numbering each element from 0. So we can also find the row and col no from its imaginary numbering.
@@ -63,6 +63,8 @@ bool searchMatrix(vector<vector<int>>& arr, int k) {
 // Now if(k>arr[i][j]) then,we need to go downwards as the matrix is sorted column wise and row wise. So i++;
 // if(k<arr[i][j]) then, we need to go leftwards as columns are sorted.
 // else return true;
+
+// This approach will work on both the problems
 
 int matSearch (vector <vector <int>> &arr, int n, int m, int k){
 	    int i=0,j=m-1;
