@@ -1,6 +1,6 @@
 // Problem Link:  https://leetcode.com/problems/search-a-2d-matrix/
 
-Approach 1: Time Complexity: O(N+log(M)) Space Complexity: O(N)
+// Approach 1: Time Complexity: O(N+log(M)) Space Complexity: O(N)
 
 bool searchMatrix(vector<vector<int>>& arr, int k) {
         int n=arr.size(),m=arr[0].size();
@@ -17,6 +17,35 @@ bool searchMatrix(vector<vector<int>>& arr, int k) {
         return false;
     }
 
+// Approach 2: Time Complexity: O(log(N*M)+O(N*M)) Space Complexity: O(N*M)
+
+// As the rows and col are sorted and also every last element in row is leeser than the first element of the next row,the we can say if we store all the elements in an array 
+// of size nxm and apply binary search,then it will work
+
+
+// Approach 1: Time Complexity: O(log(N*M)) Space Complexity: O(1)
+
+// Instead of storing it , we can determine also by applying binary search to the whole matrix without storing all the elments.
+// By assuming that we are numbering each element from 0. So we can also find the row and col no from its imaginary numbering.
+
+bool searchMatrix(vector<vector<int>>& arr, int k) {
+        int n=arr.size(),m=arr[0].size();
+        int l=0,r=n*m-1;
+        while(l<=r){
+            int mid=(l+r)>>1;
+            int row= mid/m,col= mid%m;
+            if(arr[row][col]>k){
+                r=mid-1;
+            }
+            else if(arr[row][col]<k){
+                l=mid+1;
+            }
+            else{
+                return true;
+            }
+        }
+        return false;
+    }
 
 // Problem Link:   https://practice.geeksforgeeks.org/problems/search-in-a-matrix17201720/1#
 
