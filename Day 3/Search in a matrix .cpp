@@ -48,6 +48,7 @@ bool searchMatrix(vector<vector<int>>& arr, int k) {
     }
 
 // Problem Link:   https://practice.geeksforgeeks.org/problems/search-in-a-matrix17201720/1#
+// https://leetcode.com/problems/search-a-2d-matrix-ii/
 
 
 // Approach 1: Time Complexity: O(N*M) Space Complexity: O(1)
