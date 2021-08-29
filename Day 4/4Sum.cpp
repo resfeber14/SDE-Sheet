@@ -1,6 +1,7 @@
 // Problem Link:  https://leetcode.com/problems/4sum/
 
 // Approach 1: Time Complexity: O(N*N*N*log(N)) Space Complexity: O(N)
+// Sort the array
 // Run 3 loops and then apply binary search to check if (k-(arr[i]+arr[j]+arr[k])) is present or not
 // Store all those quadraplets in a set to get unique ones.
 // now push into a vector and return
