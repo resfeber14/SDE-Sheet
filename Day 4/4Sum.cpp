@@ -6,7 +6,7 @@
 // Store all those quadraplets in a set to get unique ones.
 // now push into a vector and return
 
-// Approach 2: Time Complexity: O(N*N*N+ N*log(N)) Space Complexity: O(N)
+// Approach 2: Time Complexity: O(N*N*N+ N*log(N)) Space Complexity: O(1)
 
 // Sort the array
 // Run 2 loops and take 2 pointers to check if that pair's sum is equal to k-arr[i]-arr[j] or not.If there is such pair store it,and increment l and r pointer till they
