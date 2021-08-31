@@ -6,7 +6,14 @@
 // Then push them into a vector and return it
 
 
-// Approach 2: Use 2 Pointer  Time Complexity: O(N*N) Space Complexity: O(N)
+// Approach 2: Time Complexity: O(N*N*log(N)) Space Complexity: O(N)
+// Create a set and a map,insert the frequency of each element in the map
+// in loop of arr[i],do m[arr[i]]-- and in j loop do m[arr[j]]--,then in map search for k-arr[i]-arr[j],if there is such triplet,store it into set in sorted form .
+// when j loop ends do m[arr[j]]++ and when i loop ends m[arr[i]]++
+// At last insert all the triplets in the vector
+
+
+// Approach 3: Use 2 Pointer  Time Complexity: O(N*N) Space Complexity: O(N)
 // Sort the array
 // Traverse the array.Since array is sorted take l=i,r=n-1
 // if the arr[l]+arr[r]+arr[i]>k ,then we need to reduce the sum of arr[l]+arr[r].Since the array is sorted we can do this by r--
