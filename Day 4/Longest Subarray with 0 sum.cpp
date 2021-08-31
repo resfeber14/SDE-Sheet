@@ -21,8 +21,13 @@ void subArray(int arr[], int n)
     }
 }
 
+// // Approach 3: Time Complexity: O(N*N) Space Complexity: O(1)
+// We can also generate subarrays in O(N*N)
 
-// Approach 2: Time Complexity: O(N) Space Complexity: O(N)+O(N)
+
+
+
+// Approach 3: Time Complexity: O(N) Space Complexity: O(N)+O(N)
 
 // Create a prefix sum array and store the index of that prefix sum in a map
 // Now iterate over the prefix sum array and search if that element is present in the array or not.If yes then ans=max(ans,m[pre[i]-i)
@@ -46,7 +51,7 @@ int maxLen(int arr[], int n)
     return ans;
 }
 
-// Approach 3: Time Complexity: O(N) Space Complexity: O(N)
+// Approach 4: Time Complexity: O(N) Space Complexity: O(N)
 // We don't need to have a prefix sum array.
 // Take a map which will store the element and its index
 // Take a sum variable store the running sum in it,if the current sum is present in the map,then ans=max(ans,i+1-m[sum])
