@@ -6,7 +6,7 @@
 // Then push them into a vector and return it
 
 
-// Approach 2: Use 2 Pointer 
+// Approach 2: Use 2 Pointer  Time Complexity: O(N*N) Space Complexity: O(N)
 // Sort the array
 // Traverse the array.Since array is sorted take l=i,r=n-1
 // if the arr[l]+arr[r]+arr[i]>k ,then we need to reduce the sum of arr[l]+arr[r].Since the array is sorted we can do this by r--
