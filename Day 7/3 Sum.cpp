@@ -1,6 +1,6 @@
 // Problem Link:  https://leetcode.com/problems/3sum/
-
-// Approach 1: Time Complexity: O(N*N*N) Space Complexity: O(N)
+ 
+// Approach 1: Time Complexity: O(N*N*N*log(N)) Space Complexity: O(N) log(N) is for inserting an element into set
 // Iterate over the array by creating 3 loops.
 // Take a set push all the indices {a,b,c} where arr[a]+arr[b]+arr[c]==target
 // Then push them into a vector and return it
