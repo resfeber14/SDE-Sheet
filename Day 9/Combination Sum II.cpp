@@ -1,6 +1,6 @@
 // Problem Link:  https://leetcode.com/problems/combination-sum-ii/
 
-// Approach : Time complexity: O(2^n*n + log(2^n))) Space Complexity: unknown 
+// Approach : Time complexity: O(2^n*n *log(2^n))) Space Complexity: unknown 
 
 // Sort the array
 // Make a set of vector.Insert every possible combiation.Set of vector will amke sure no duplicate combination is inserted
