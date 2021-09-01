@@ -22,3 +22,24 @@ void solve(int i,int curr,vector<int> &v,vector<int> &arr,int n){
         return v;
         
     }
+// Similar Problem :  https://leetcode.com/problems/subsets/
+
+// Take a temp vector and traverse the array and push everytime and then call the recursion the pop back
+
+void solve(int i,int curr,vector<int> &v,vector<int> &arr,int n){
+        if(i==n){
+            v.push_back(curr);
+            return ;
+        }
+        solve(i+1,curr,v,arr,n);
+        solve(i+1,curr+arr[i],v,arr,n);
+        
+    }
+    
+    vector<int> subsetSums(vector<int> arr, int n){
+        vector<int> v;
+        solve(0,0,v,arr,n);
+        return v;
+        
+    }
+
