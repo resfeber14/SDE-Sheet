@@ -14,7 +14,7 @@ static bool comp(Job &arr1,Job &arr2){
         if(arr1.profit==arr2.profit){
             return arr1.dead>arr2.dead;
         }
-        return arr1.profit>=arr2.profit;
+        return arr1.profit>arr2.profit;
     }
     vector<int> JobScheduling(Job arr[], int n) 
     { 
