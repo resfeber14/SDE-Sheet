@@ -33,8 +33,8 @@ void solve(set<vector<int>> &v,int k,int i,vector<int> &temp,vector<int>& arr){
         return v;
     }
 
-// Approach 2: time complexity: O(2^n * n)   Space Complexity: Unknown
-
+// Approach 2: time complexity: O(2^k * k)   Space Complexity: Unknown
+// *k is for pushing temp into v
 // Same as subsets II
 // Sort the array and run a loop to check if the current element is less than the k or not.if yes then take it
 // else don't take it
