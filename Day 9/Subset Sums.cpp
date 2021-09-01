@@ -1,7 +1,7 @@
 // Problem Link:  https://practice.geeksforgeeks.org/problems/subset-sums2234/1#
 
 
-// Approach : Time complexity: O(2^n) Space Complexity: O(1)
+// Approach : Time complexity: O(2^n) Space Complexity: O(2^N)
 
 // Apply Inclusion exclusion principle. 
 
