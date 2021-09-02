@@ -38,7 +38,7 @@
     }
 
 
-// Approach 2: Time Complexity:
+// Approach 2: Time Complexity: O(n*n!) Space Complexity: O(1)
 
 // Here we are swapping characters at each index and call the recursion and on returning back we are swapping back to restore the original array
 
