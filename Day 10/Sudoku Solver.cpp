@@ -1,4 +1,4 @@
-// Problem :
+// Problem :  https://leetcode.com/problems/sudoku-solver/
 
 
 // Approach 1:
@@ -58,7 +58,7 @@ bool canWePut(char num,int i,int j,vector<vector<char> > &arr){
 
 
 // Approach 2: Optimisation
-// In the check function,just run the loop 0...9 
+// In the check function,just run the loop 0...9 and do some observation
 
 bool canWePut(char num,int i,int j,vector<vector<char> > &arr){
         int row= (i/3)*3 ,col=(j/3)*3;
