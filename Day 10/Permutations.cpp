@@ -1,6 +1,7 @@
 // Problem Link: https://leetcode.com/problems/permutations/
 
 // Approach : Time complexity: O(n*n!) Space Complexity: O(N)
+// Bcoz we are generating n! permutations so the time complexity= O(N!) and also we are looping till n so the time complexity: O(N*N!)
 
 // Here we are taking all the possibilities
 
