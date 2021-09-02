@@ -1,6 +1,7 @@
 // Problem Link:  https://practice.geeksforgeeks.org/problems/rat-in-a-maze-problem/1#
 
-// Approach: Consider all the possibilities
+// Approach: Time complexity: 4^(n*m) Auxiliary Space Complexity: Depth of recursion tree O(n*m)
+// Consider all the possibilities
 
 
 void solve(int i,int j,string s,vector<vector<int> > &arr,int n,vector<vector<bool>> &visited,vector<string> &v){
