@@ -1,7 +1,11 @@
 // Problem Link:  https://www.interviewbit.com/problems/allocate-books/
 
+// Approach 2 : Time Complexity: O(n*n) Space Complexity: O(n*n)
+// We can apply recursion here and then apply dp (Partition:))
 
-// Approach : Time Complexity: O(n*log(n)) Space Complexity: O(1)
+
+
+// Approach 2 : Time Complexity: O(n*log(n)) Space Complexity: O(1)
 
 // SInce if we allot maximum x no. of pages can be allocated to student then,x+1,x+2,x+3,... can also be
 // So we can apply binary search
