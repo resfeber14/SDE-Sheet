@@ -16,7 +16,9 @@ int search(vector<int>& arr, int target) {
             int mid=(l+r)>>1;
             if(arr[mid]==target)
                 return mid;
+                // checking if left half is sorted or not 
             if(arr[l]<=arr[mid]){
+                    // if target lies on the left half or not
                 if(target>=arr[l] && target<arr[mid]){
                     r=mid-1;
                 }
@@ -24,7 +26,9 @@ int search(vector<int>& arr, int target) {
                     l=mid+1;
                 }
             }
+                // // checking if right half is sorted or not 
             else if(arr[mid]<=arr[r]){
+                     // if target lies on the right half or not
                 if(target>arr[mid] && target<=arr[r]){
                     l=mid+1;
                 }
