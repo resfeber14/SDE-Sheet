@@ -1,7 +1,7 @@
 // Problem Link: https://leetcode.com/problems/single-element-in-a-sorted-array/
 
 // Approach 1: Time complexity: O(N) Space Complexity: O(1)
-// Since the array is sorted simply traverse the array and compare the current element with the adjacent element
+// Since the array is sorted simply traverse the array and compare the current element with the adjacent element or traverse and find xor
 
 // Approach 2: Time complexity: O(logN) Space Complexity: O(1)
 
