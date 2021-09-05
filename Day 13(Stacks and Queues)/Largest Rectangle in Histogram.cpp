@@ -1,6 +1,6 @@
 // Problem Link: https://leetcode.com/problems/largest-rectangle-in-histogram/
 
-// Approach 1: Time complexity: O(n*n) Space Complexity: O(4*n)
+// Approach 1: Time complexity: O(N) Space Complexity: O(4*n)
 // Traverse the whole array Linearly for finding next smaller element to the left and to the right of the current element and find the current maximum
 // Rectangle of the histogram and thus find the maximum one
 
@@ -58,3 +58,31 @@ int largestRectangleArea(vector<int>& arr) {
         return ans;
     }    
     
+// Approach 2: Time complexity: O(N) +O(N) Space complexity: O(N)
+// Here we can push the elemets into the stack if it is empty or it is greater than the element at the top of the stack
+// else if the element at the top of the stack is greater than or equal to the current element , We have found the next smaller element at the right,i.e. arr[i] for the 
+// element at the top of the stack.Now we pop the stack
+// And if there is still an element in the top of the stack then it will be the obviously lesser than what was earlier in the top of the stack which we currently popped
+// then that will be the nearest smaller to the left then width will be (i-s.top()-1)
+// else if the stack becomes empty after popping then Consider width will be i
+
+
+int largestRectangleArea(vector<int>& arr) {
+        int n=arr.size();
+        stack<int> s;
+        int ans=0;
+        for(int i=0;i<=n;i++){
+            while(!s.empty() && (i==n || arr[s.top()]>=arr[i])){
+                int curr_height= arr[s.top()];
+                s.pop();
+                int width;
+                if(s.empty())
+                    width=i;
+                else
+                    width= i-s.top()-1;
+                ans= max(ans,width*curr_height);
+                }
+            s.push(i);
+        }
+        return ans;
+    }
