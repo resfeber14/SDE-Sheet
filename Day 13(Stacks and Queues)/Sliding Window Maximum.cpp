@@ -3,7 +3,7 @@
 // Approach : Time complexity: O(N*K) Space complexity: O(1)
 // Traverse the array from i=0 to i<=n-k and then again run a loop from j=i to i+k-1 to find the maximum in every subarray of size k
 
-// Approach: Time complexity: O(N) Space complexity: O(K)
+// Approach: Time complexity: O(N)+ O(K) Space complexity: O(K)
 
 // Have a list/deque and store in it the elements present in array of size k in decreasing order 
 // The front will be the index of maximum element in array of size k
