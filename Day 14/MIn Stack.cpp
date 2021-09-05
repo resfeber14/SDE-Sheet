@@ -1,6 +1,6 @@
 // Problem Link:  https://leetcode.com/problems/min-stack/
 
-// Approach: Time complexity: O(N)  Space complexity: O(N)
+// Approach: Time complexity: O(1)  Space complexity: O(2*N)
 
 // Store element in a stack
 // To find minimum element in O(1) Time,use another stack in which we will push minimum element till now into that
@@ -37,3 +37,44 @@ stack<int> s,s1;
     int getMin() {
         return s1.top();
     }
+
+// Approach 2: Time complexity: O(1)  Space complexity: O(2*N)
+// Instead of taking 2 stacks,take only one stack which will store current value and minimum element till now
+
+
+ stack<pair<int,int> > s;
+    MinStack() {
+        
+    }
+    
+    void push(int val) {
+        if(s.empty()){
+            s.push({val,val});
+        }
+        else{
+            if(s.top().second>=val){
+                s.push({val,val});
+            }
+            else{
+                s.push({val,s.top().second});
+            }
+        }
+    }
+    
+    void pop() {
+        s.pop();
+    }
+    
+    int top() {
+        return s.top().first;
+    }
+    
+    int getMin() {
+        return s.top().second;
+    }
+};
+
+
+// Approach 2: Time complexity: O(1)  Space complexity: O(N)
+
+
