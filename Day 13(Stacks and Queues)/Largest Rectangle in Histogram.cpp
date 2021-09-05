@@ -5,6 +5,7 @@
 // Rectangle of the histogram and thus find the maximum one
 
 // Approach 2: Time complexity: O(n*n) Space Complexity: O(4*n)
+// We are considering the current element's height to be the maximum height and find next smaller element to its left and right
 // Use stack to find the next smaller element to the left and to the right of the current element 
 
 int largestRectangleArea(vector<int>& arr) {
