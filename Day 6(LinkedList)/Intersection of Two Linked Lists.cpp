@@ -53,7 +53,7 @@ else will continue traversing
 
 /*
 Approach 3:
-Time Complexity: O(N+M+N) Space Complexity: O(1)
+Time Complexity: O(2*M) Space Complexity: O(1)
  Firstly find the length of both LinkedLists.Then whichever LinkedList's length is greater,Take  a dummy node and traverse the larger linkedlist till both's length become equal
  Then start traversing both the pointers till they meet
 
@@ -87,6 +87,20 @@ ListNode *getIntersectionNode(ListNode *l1, ListNode *l2) {
         while(dummy1!=dummy2){
             dummy1=dummy1->next;
             dummy2=dummy2->next;
+        }
+        return dummy1;
+    }
+/*
+Approach 4:   Time Complexity: O(2*M) Space Complexity: O(1)
+
+
+*/
+ListNode *getIntersectionNode(ListNode *l1, ListNode *l2) {
+        ListNode* dummy1=l1;
+        ListNode* dummy2=l2;
+        while(dummy1!=dummy2){
+            dummy1=dummy1==NULL?l2:dummy1->next;
+            dummy2=dummy2==NULL?l1:dummy2->next;
         }
         return dummy1;
     }
